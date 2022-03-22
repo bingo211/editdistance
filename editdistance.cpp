@@ -1,7 +1,6 @@
 #include "editdistance.h"
 #include <algorithm>
 #include "utils.h"
-#include <iostream>
 using namespace std;
 
 editdistance::editdistance(const std::string& source, 
@@ -125,7 +124,6 @@ void editdistance::backtracking()
 //计算ACC
 float editdistance::getAcc()
 {
-    cout << this->N  << " "<<this->N - this->S - this->D - this->I <<  endl;
     if (this->N == 0)
         return 0;
     return float(this->N - this->S - this->D - this->I) / this->N;
